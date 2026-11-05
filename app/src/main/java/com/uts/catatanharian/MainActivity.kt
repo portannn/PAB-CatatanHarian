@@ -59,8 +59,8 @@ class MainActivity : AppCompatActivity() {
     // Jumlah catatan hanya milik user yang sedang login.
     private fun loadNoteCount064() {
         lifecycleScope.launch {
-            val dao = AppDatabase.getInstance(this@MainActivity).noteDao066()
-            val count = dao.getAllByUser066(session064.getUserId()).size
+            val dao = AppDatabase.getInstance(this@MainActivity).noteDao064()
+            val count = dao.getAllByUser064(session064.getUserId()).size
             binding064.tvNoteCount064.text = count.toString()
         }
     }
