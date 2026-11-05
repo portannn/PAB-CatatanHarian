@@ -13,5 +13,6 @@ class SessionManager(context: Context) {
 
     fun isLoggedIn(): Boolean = prefs.getInt("user_id", -1) != -1
     fun getUserId(): Int = prefs.getInt("user_id", -1)
+    fun getUsername(): String = prefs.getString("username", "") ?: ""
     fun clear() = prefs.edit().clear().apply()
 }
