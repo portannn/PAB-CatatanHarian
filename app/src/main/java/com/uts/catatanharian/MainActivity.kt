@@ -2,7 +2,6 @@ package com.uts.catatanharian
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.uts.catatanharian.auth.LoginActivity
 import com.uts.catatanharian.data.AppDatabase
 import com.uts.catatanharian.databinding.ActivityMain064Binding
+import com.uts.catatanharian.note.NoteListActivity
 import com.uts.catatanharian.util.SessionManager
 import kotlinx.coroutines.launch
 
@@ -45,8 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         binding064.tvGreeting064.text = "Halo, ${session064.getUsername()}!"
         binding064.btnViewNotes064.setOnClickListener {
-            // TODO: arahkan ke layar List Catatan (Bagian #4) setelah tersedia.
-            Toast.makeText(this, "Layar list catatan belum tersedia", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, NoteListActivity::class.java))
         }
         binding064.btnLogout064.setOnClickListener { confirmLogout064() }
     }
