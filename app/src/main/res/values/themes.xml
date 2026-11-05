@@ -1,8 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Tema Quartz. Warna terang/gelap diatur lewat values/colors.xml dan values-night/colors.xml. -->
     <style name="Base.Theme.CatatanHarian" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/quartz_primary</item>
+        <item name="colorOnPrimary">@color/quartz_on_primary</item>
+        <item name="colorPrimaryContainer">@color/quartz_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/quartz_on_primary_container</item>
+        <item name="colorSecondary">@color/quartz_secondary</item>
+        <item name="colorSecondaryContainer">@color/quartz_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/quartz_on_secondary_container</item>
+        <item name="android:colorBackground">@color/quartz_background</item>
+        <item name="colorSurface">@color/quartz_surface</item>
+        <item name="colorOnSurface">@color/quartz_on_surface</item>
+        <item name="colorSurfaceVariant">@color/quartz_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/quartz_on_surface_variant</item>
+        <item name="colorOutline">@color/quartz_outline</item>
+        <item name="colorOutlineVariant">@color/quartz_outline_variant</item>
+
+        <item name="materialButtonStyle">@style/Widget.Quartz.Button064</item>
+        <item name="textInputStyle">@style/Widget.Quartz.TextInput064</item>
+        <item name="materialCardViewStyle">@style/Widget.Quartz.Card064</item>
     </style>
 
     <style name="Theme.CatatanHarian" parent="Base.Theme.CatatanHarian" />

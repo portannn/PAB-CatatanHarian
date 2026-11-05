@@ -3,10 +3,12 @@ package com.uts.catatanharian.auth
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.uts.catatanharian.MainActivity
 import com.uts.catatanharian.data.AppDatabase
+import com.uts.catatanharian.util.applySystemBarsPadding064
 import com.uts.catatanharian.databinding.ActivityLogin064Binding
 import com.uts.catatanharian.util.SessionManager
 import kotlinx.coroutines.launch
@@ -17,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         session064 = SessionManager(this)
         if (session064.isLoggedIn()) {
             goToDashboard064()
@@ -24,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
         }
         binding064 = ActivityLogin064Binding.inflate(layoutInflater)
         setContentView(binding064.root)
+        binding064.root.applySystemBarsPadding064()
 
         binding064.btnLogin064.setOnClickListener { doLogin064() }
         binding064.tvToRegister064.setOnClickListener {

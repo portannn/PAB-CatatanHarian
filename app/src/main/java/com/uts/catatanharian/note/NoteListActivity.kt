@@ -23,6 +23,7 @@ class NoteListActivity : AppCompatActivity() {
     private lateinit var binding064: ActivityNoteList064Binding
     private lateinit var session064: SessionManager
     private lateinit var adapter064: NoteAdapter064
+    private var animated064 = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,8 +77,14 @@ class NoteListActivity : AppCompatActivity() {
             } else {
                 dao064.searchByUser064(userId064, keyword064)
             }
-            adapter064.submitList(notes064)
-            binding064.tvEmpty064.visibility = if (notes064.isEmpty()) View.VISIBLE else View.GONE
+            // Animasi masuk item hanya dijalankan saat daftar pertama kali tampil.
+            adapter064.submitList(notes064) {
+                if (!animated064 && notes064.isNotEmpty()) {
+                    animated064 = true
+                    binding064.rvNotes064.scheduleLayoutAnimation()
+                }
+            }
+            binding064.emptyState064.visibility = if (notes064.isEmpty()) View.VISIBLE else View.GONE
             binding064.tvEmpty064.text =
                 if (keyword064.isEmpty()) "Belum ada catatan.\nKetuk + untuk menambah."
                 else "Tidak ada catatan yang cocok."

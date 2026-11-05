@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palet Quartz (mode gelap). -->
+    <color name="quartz_primary">#F0B3D2</color>
+    <color name="quartz_on_primary">#4B2037</color>
+    <color name="quartz_primary_container">#4A2840</color>
+    <color name="quartz_on_primary_container">#FFD8E8</color>
+    <color name="quartz_secondary">#D5C0CB</color>
+    <color name="quartz_secondary_container">#4D3F47</color>
+    <color name="quartz_on_secondary_container">#F1DEE7</color>
+    <color name="quartz_background">#161215</color>
+    <color name="quartz_surface">#1E181C</color>
+    <color name="quartz_on_surface">#EBE0E4</color>
+    <color name="quartz_surface_variant">#3A3238</color>
+    <color name="quartz_on_surface_variant">#D2C3CA</color>
+    <color name="quartz_outline">#9B8D94</color>
+    <color name="quartz_outline_variant">#4F444A</color>
+
+    <color name="quartz_gem_a">#F7CDE2</color>
+    <color name="quartz_gem_b">#E8A6C8</color>
+    <color name="quartz_gem_c">#C97FA8</color>
+    <color name="quartz_gem_d">#A25B86</color>
+</resources>

@@ -2,4 +2,26 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Palet Quartz (mode terang): mauve rose-quartz dengan netral hangat. -->
+    <color name="quartz_primary">#84506E</color>
+    <color name="quartz_on_primary">#FFFFFF</color>
+    <color name="quartz_primary_container">#F8DCEA</color>
+    <color name="quartz_on_primary_container">#3A1530</color>
+    <color name="quartz_secondary">#6B5B66</color>
+    <color name="quartz_secondary_container">#F1E4EB</color>
+    <color name="quartz_on_secondary_container">#25181F</color>
+    <color name="quartz_background">#FBF8F9</color>
+    <color name="quartz_surface">#FFFFFF</color>
+    <color name="quartz_on_surface">#201A1D</color>
+    <color name="quartz_surface_variant">#F1E8EC</color>
+    <color name="quartz_on_surface_variant">#4F444A</color>
+    <color name="quartz_outline">#82747B</color>
+    <color name="quartz_outline_variant">#E3D6DC</color>
+
+    <!-- Empat sisi facet pada logo permata. -->
+    <color name="quartz_gem_a">#E7B7D0</color>
+    <color name="quartz_gem_b">#C98BAE</color>
+    <color name="quartz_gem_c">#A8668C</color>
+    <color name="quartz_gem_d">#84506E</color>
 </resources>

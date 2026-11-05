@@ -12,13 +12,26 @@
         android:orientation="vertical"
         android:padding="24dp">
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="37dp"
+            android:contentDescription="Logo Quartz"
+            android:src="@drawable/ic_gem_064" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Buat Akun"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="12dp"
+            android:text="Buat akun"
+            android:textAppearance="@style/Text.Quartz.Title064" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="28dp"
+            android:text="Mulai menulis di Quartz."
+            android:textAppearance="@style/Text.Quartz.Body064" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username_064"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo permata Quartz untuk dipakai di dalam aplikasi (warna mengikuti mode terang/gelap). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="56dp"
+    android:height="52dp"
+    android:viewportWidth="56"
+    android:viewportHeight="52">
+    <group
+        android:translateX="-26"
+        android:translateY="-32">
+        <path android:fillColor="@color/quartz_gem_a" android:pathData="M40,36 L47,50 L28,50 Z" />
+        <path android:fillColor="@color/quartz_gem_b" android:pathData="M40,36 L68,36 L61,50 L47,50 Z" />
+        <path android:fillColor="@color/quartz_gem_a" android:pathData="M68,36 L80,50 L61,50 Z" />
+        <path android:fillColor="@color/quartz_gem_c" android:pathData="M28,50 L47,50 L54,80 Z" />
+        <path android:fillColor="@color/quartz_gem_b" android:pathData="M47,50 L61,50 L54,80 Z" />
+        <path android:fillColor="@color/quartz_gem_d" android:pathData="M61,50 L80,50 L54,80 Z" />
+    </group>
+</vector>

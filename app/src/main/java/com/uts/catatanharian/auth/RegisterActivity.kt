@@ -2,10 +2,12 @@ package com.uts.catatanharian.auth
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.uts.catatanharian.data.AppDatabase
 import com.uts.catatanharian.data.User064
+import com.uts.catatanharian.util.applySystemBarsPadding064
 import com.uts.catatanharian.databinding.ActivityRegister064Binding
 import kotlinx.coroutines.launch
 
@@ -14,8 +16,10 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding064 = ActivityRegister064Binding.inflate(layoutInflater)
         setContentView(binding064.root)
+        binding064.root.applySystemBarsPadding064()
 
         binding064.btnRegister064.setOnClickListener { doRegister064() }
         binding064.tvToLogin064.setOnClickListener { finish() }
