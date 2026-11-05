@@ -54,8 +54,8 @@ app/src/main/java/com/uts/catatanharian/
 │   ├── AppDatabase.kt           # Room database, versi 2
 │   ├── User064.kt               # Tabel users_064
 │   ├── UserDao064.kt
-│   ├── Note066.kt               # Tabel notes_066
-│   └── NoteDao066.kt
+│   ├── Note064.kt               # Tabel notes_064
+│   └── NoteDao064.kt
 └── util/
     └── SessionManager.kt        # Simpan dan baca sesi (SharedPreferences)
 ```
@@ -65,7 +65,7 @@ app/src/main/java/com/uts/catatanharian/
 Sesuai ketentuan soal, nama class, tabel, kolom, dan fungsi hasil modifikasi diakhiri **3 digit NIM** pemilik bagiannya. Karena tugas dibagi, tiap bagian memakai NIM-nya sendiri:
 
 - `064`: bagian Auth (`User064`, `UserDao064`, `AuthValidator064`, tabel `users_064`)
-- `066`: bagian Data layer (`Note066`, `NoteDao066`, tabel `notes_066`)
+- `064`: bagian Data layer (`Note064`, `NoteDao064`, tabel `notes_064`)
 
 ## Skema database
 
@@ -79,28 +79,28 @@ Nama database: `catatan_harian.db`, versi 2.
 | `username_064` | String | Unique index |
 | `password_064` | String | Hash SHA-256 |
 
-**`notes_066`**
+**`notes_064`**
 
 | Kolom | Tipe | Keterangan |
 |---|---|---|
 | `id` | Int | Primary key, auto increment |
-| `user_id_066` | Int | Foreign key ke `users_064.id`, `ON DELETE CASCADE`, diberi index |
-| `judul_066` | String | |
-| `isi_066` | String | |
-| `tanggal_066` | Long | Epoch millis; format ke teks dilakukan di UI |
+| `user_id_064` | Int | Foreign key ke `users_064.id`, `ON DELETE CASCADE`, diberi index |
+| `judul_064` | String | |
+| `isi_064` | String | |
+| `tanggal_064` | Long | Epoch millis; format ke teks dilakukan di UI |
 
-### API `NoteDao066`
+### API `NoteDao064`
 
 Semua fungsi `suspend` dan semuanya terfilter `userId`.
 
 | Fungsi | Keterangan |
 |---|---|
-| `insertNote066(note): Long` | Tambah catatan, mengembalikan id baru |
-| `getAllByUser066(userId): List<Note066>` | Semua catatan milik user, tanggal terbaru dulu |
-| `getById066(id, userId): Note066?` | `null` bila catatan bukan milik user |
-| `updateNote066(id, userId, judul, isi): Int` | Mengembalikan jumlah baris terubah; `tanggal` tidak diubah |
-| `deleteNote066(id, userId): Int` | Mengembalikan jumlah baris terhapus |
-| `searchByUser066(userId, keyword): List<Note066>` | Cari di judul dan isi |
+| `insertNote064(note): Long` | Tambah catatan, mengembalikan id baru |
+| `getAllByUser064(userId): List<Note064>` | Semua catatan milik user, tanggal terbaru dulu |
+| `getById064(id, userId): Note064?` | `null` bila catatan bukan milik user |
+| `updateNote064(id, userId, judul, isi): Int` | Mengembalikan jumlah baris terubah; `tanggal` tidak diubah |
+| `deleteNote064(id, userId): Int` | Mengembalikan jumlah baris terhapus |
+| `searchByUser064(userId, keyword): List<Note064>` | Cari di judul dan isi |
 
 `userId` diambil dari `SessionManager.getUserId()`.
 
@@ -131,7 +131,7 @@ Di Windows, pakai `gradlew.bat assembleDebug`.
 
 ## Pengujian
 
-Test untuk data layer ada di `app/src/androidTest/java/com/uts/catatanharian/data/ExampleInstrumentedTest.kt` (kelas `NoteDao066Test`). Test memakai database in-memory dan butuh emulator atau perangkat yang berjalan.
+Test untuk data layer ada di `app/src/androidTest/java/com/uts/catatanharian/data/ExampleInstrumentedTest.kt` (kelas `NoteDao064Test`). Test memakai database in-memory dan butuh emulator atau perangkat yang berjalan.
 
 Yang diuji:
 
